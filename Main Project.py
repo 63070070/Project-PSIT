@@ -69,7 +69,7 @@ def guess(input_txt):
 window_1 = tk.Tk()
 window_1.title("Hangman!!!")
 word_list = ["car", "dog", "cat", "shoes", "bloom", "book", "belt", "microwave", "shirts", \
-"gloves","bat", "mouth", "coffee", "the moon", "glass"]
+"gloves","bat", "mouth", "coffee", "moon", "glass"]
 hint_list = ["It's a four-wheeled vehicle", "It can bark", "It's like a tiger but smaller", \
 "It's cover your feet", "Sweep things on the ground", "You can read it or write it", \
 "Keeping your pants on your waist", "Heating things up", "Wear on your upper body", \
