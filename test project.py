@@ -22,7 +22,7 @@ def newgame():
     already_guess = []
 
 
-def guess(input_txt):
+
     """Check Function"""
     global word_withspaces
     global number_guess
