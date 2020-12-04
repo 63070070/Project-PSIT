@@ -68,15 +68,18 @@ window_1.title("Hangman!!!")
 
 word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves", "clock", "chair", "pencil", \
              "knife", "silent", "majority", "elevator", "camera", "headphone", "drink", "star", "mirror", \
-             "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "dentist", "umbrella", "century"]
-hint_list = ["It's a four-wheeled vehicle", "It can bark", "It's like a tiger but smaller", "Sweep things on the ground", \
-             "You can read it or write it", "Keeping your pants on your waist", "Heating things up", \
-             "Cover your hands", "It's a device for showing time", "Used for sit", \
-             "Used for writing or drawing", "It's used for cutting", \
-             "When thing goes quiet", "Most", "Used for lifting people", "Take a picture", "Listen to music", \
-             "When you thristy", "Shinning in the space", "It's reflex an image", "Sticky Paper", "Sadness", \
-             "American football", "Used for filling water", "Used for calling", "Where cars run", "On and off", \
-             "The doctor for teeth", "Used for protection agianst rain", "A hundred years"]
+             "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "dentist", "umbrella", "century", \
+             "school", "behavior", "current", "day", "death", "father", "flight", "look", "meat", "rain", "religion]
+hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger but smaller", "sweep things on the ground", \
+             "you can read it or write it", "keeping your pants on your waist", "heating things up", \
+             "cover your hands", "a device for showing time", "used for sit", "used for writing or drawing", "used for cutting", \ 
+             "when thing goes quiet", "most", "used for lifting people", "used to take a picture", "listen to music", \
+             "when you thristy", "shinning in the space", "reflection of an image", "sticky paper", "sadness", \
+             "american football", "used for filling water", "used for calling", "a place where cars run", "on and off", \
+             "the doctor for teeth", "used for protection agianst rain", "a period hundred years", "a place where people goes to study", \
+             "the way that someone behaves", "of the present time", "a period of 24 hours", "the end of life", "a male parent", \
+             "a journey in an aircraft", "to direct your eyes in order to see", "the flesh of an animal when it is used for food", \
+             "drops of water from clouds", "the belief in, and worship of, a god or gods"]
 path = os.getcwd()
 photos = [tk.PhotoImage(file=path+r"\images\new hang1.png")\
     , tk.PhotoImage(file=path+r'\images\new hang2.png')\
