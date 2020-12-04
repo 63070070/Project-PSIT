@@ -69,10 +69,10 @@ window_1.title("Hangman!!!")
 word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves", "clock", "chair", "pencil", \
              "knife", "silent", "majority", "elevator", "camera", "headphone", "drink", "star", "mirror", \
              "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "dentist", "umbrella", "century", \
-             "school", "behavior", "current", "day", "death", "father", "flight", "look", "meat", "rain", "religion]
+             "school", "behavior", "current", "day", "death", "father", "flight", "look", "meat", "rain", "religion"]
 hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger but smaller", "sweep things on the ground", \
              "you can read it or write it", "keeping your pants on your waist", "heating things up", \
-             "cover your hands", "a device for showing time", "used for sit", "used for writing or drawing", "used for cutting", \ 
+             "cover your hands", "a device for showing time", "used for sit", "used for cutting", \
              "when thing goes quiet", "most", "used for lifting people", "used to take a picture", "listen to music", \
              "when you thristy", "shinning in the space", "reflection of an image", "sticky paper", "sadness", \
              "american football", "used for filling water", "used for calling", "a place where cars run", "on and off", \
@@ -81,14 +81,14 @@ hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger bu
              "a journey in an aircraft", "to direct your eyes in order to see", "the flesh of an animal when it is used for food", \
              "drops of water from clouds", "the belief in, and worship of, a god or gods"]
 path = os.getcwd()
-photos = [tk.PhotoImage(file=path+r"\images\new hang1.png")\
-    , tk.PhotoImage(file=path+r'\images\new hang2.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang3.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang4.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang5.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang6.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang7.png')\
-    , tk.PhotoImage(file=path+r'\images\new hang8.png')]
+photos = [tk.PhotoImage(file=path+r"\images\new hang1.png").subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang2.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang3.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang4.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang5.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang6.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang7.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang8.png').subsample(2)]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
@@ -98,28 +98,28 @@ tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
 
 
 imgLabel = tk.Label(window_1)
-imgLabel.place(anchor="center", x=width_sc/2, y=height_sc/4)
+imgLabel.place(anchor="center", x=width_sc/2, y=height_sc/3.5)
 imgLabel.config(image=photos[0])
 
 
 lblword = StringVar()
 txt_show = tk.Label(window_1, textvariable=lblword)
-txt_show.place(anchor="center", x=width_sc/2, y=400)
+txt_show.place(anchor="center", x=width_sc/2, y=550)
 
 
 word_hint = StringVar()
 txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
-txt_hint.place(anchor="center", x=width_sc/2, y=525)
+txt_hint.place(anchor="center", x=width_sc/2, y=675)
 
 
-tk.Label(text="Enter your guess : ", bg="pink").place(x=200, y=650, anchor="w")
+tk.Label(text="Enter your guess : ", bg="pink").place(x=200, y=800, anchor="w")
 blank_txt = StringVar()
 txt = tk.Entry(textvariable=blank_txt, width=10)
-txt.place(anchor="w", x=750, y=650)
+txt.place(anchor="w", x=750, y=800)
 
 
 enter = tk.Button(window_1, text="Enter", font="Consolas 30", fg="#FF3232", width=10, command=lambda txt=txt: guess(txt))
-enter.place(anchor="center", x=1200, y=650)
+enter.place(anchor="center", x=1200, y=800)
 
 newgame()
 window_1.mainloop()
