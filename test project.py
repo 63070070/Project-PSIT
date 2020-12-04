@@ -84,7 +84,11 @@ photos = [tk.PhotoImage(file=path+r"\images\hang4.png")\
     , tk.PhotoImage(file=path+r'\images\hang10.png')\
     , tk.PhotoImage(file=path+r'\images\hang11.png')]
 
-
+window_1.option_add("*Font", "Consolas 40")
+width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
+window_1.geometry("%dx%d"%(width_sc, height_sc))
+tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
+    .place(anchor="center", x=width_sc/2, y=50)
 
 
 imgLabel = tk.Label(window_1)
