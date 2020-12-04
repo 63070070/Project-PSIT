@@ -75,14 +75,14 @@ hint_list = ["It's a four-wheeled vehicle", "It can bark", "It's like a tiger bu
              "When thing goes quiet", "Most", "Used for lifting people"]
 
 path = os.getcwd()
-photos = [tk.PhotoImage(file=path+r"\images\hang4.png")\
-    , tk.PhotoImage(file=path+r'\images\hang5.png')\
-    , tk.PhotoImage(file=path+r'\images\hang6.png')\
-    , tk.PhotoImage(file=path+r'\images\hang7.png')\
-    , tk.PhotoImage(file=path+r'\images\hang8.png')\
-    , tk.PhotoImage(file=path+r'\images\hang9.png')\
-    , tk.PhotoImage(file=path+r'\images\hang10.png')\
-    , tk.PhotoImage(file=path+r'\images\hang11.png')]
+photos = [tk.PhotoImage(file=path+r"\images\new hang1.png")\
+    , tk.PhotoImage(file=path+r'\images\new hang2.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang3.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang4.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang5.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang6.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang7.png')\
+    , tk.PhotoImage(file=path+r'\images\new hang8.png')]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
