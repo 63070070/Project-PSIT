@@ -67,13 +67,16 @@ window_1 = tk.Tk()
 window_1.title("Hangman!!!")
 
 word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves", "clock", "chair", "pencil", \
-             "knife", "silent", "majority", "elevator"]
+             "knife", "silent", "majority", "elevator", "camera", "headphone", "drink", "star", "black mirror", \
+             "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "dentist", "umbrella", "century"]
 hint_list = ["It's a four-wheeled vehicle", "It can bark", "It's like a tiger but smaller", "Sweep things on the ground", \
              "You can read it or write it", "Keeping your pants on your waist", "Heating things up", \
              "Cover your hands", "It's a device for showing time", "Used for sit", \
              "Used for writing or drawing", "It's used for cutting", \
-             "When thing goes quiet", "Most", "Used for lifting people"]
-
+             "When thing goes quiet", "Most", "Used for lifting people", "Take a picture", "Listen to music", \
+             "When you thristy", "Shinning in the space", "One-sided mirror", "Sticky Paper", "Sadness", \
+             "American football", "Used for filling water", "Used for calling", "Where cars run", "On and off", \
+             "The doctor for teeth", "Used for protection agianst rain", "A hundred years"]
 path = os.getcwd()
 photos = [tk.PhotoImage(file=path+r"\images\new hang1.png")\
     , tk.PhotoImage(file=path+r'\images\new hang2.png')\
