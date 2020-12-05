@@ -89,7 +89,7 @@ photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2
     , tk.PhotoImage(file=path+r'\images\new hang6_removebg.png').subsample(2)\
     , tk.PhotoImage(file=path+r'\images\new hang7_removebg.png').subsample(2)\
     , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)]]
+    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
