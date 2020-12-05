@@ -114,14 +114,16 @@ txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
 txt_hint.place(anchor="center", x=width_sc/2, y=height_sc/1.5)
 
 
-tk.Label(text="Enter your guess : ", bg="pink").place(x=350, y=height_sc/1.3, anchor="w")
+frame_guess = tk.Frame(window_1)
+tk.Label(frame_guess, text="Enter your guess : ", bg="pink").pack(side="left", padx=(0, 10))
 blank_txt = StringVar()
-txt = tk.Entry(textvariable=blank_txt, width=5, bd=5, justify="center")
-txt.place(anchor="w", x=900, y=height_sc/1.3)
+txt = tk.Entry(frame_guess, textvariable=blank_txt, width=5, bd=5, justify="center")
+txt.pack(side="left", padx=(0, 10))
+enter = tk.Button(frame_guess, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
+enter.pack(side="left", padx=(10, 0))
+frame_guess.place(x=width_sc/4, y=height_sc/1.31)
 
 
-enter = tk.Button(window_1, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
-enter.place(anchor="center", x=1200, y=height_sc/1.31)
 
 newgame()
 window_1.mainloop()
