@@ -81,14 +81,14 @@ hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger bu
              "a journey in an aircraft", "to direct your eyes in order to see", "the flesh of an animal when it is used for food", \
              "drops of water from clouds", "the belief in, and worship of, a god or gods"]
 path = os.getcwd()
-photos = [tk.PhotoImage(file=path+r"\images\new hang1.png").subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang2.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang3.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang4.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang5.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang6.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang7.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang8.png').subsample(2)]
+photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang2_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang3_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang4_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang5_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang6_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang7_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2)]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
