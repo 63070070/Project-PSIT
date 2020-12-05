@@ -94,6 +94,7 @@ photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
 window_1.geometry("%dx%d"%(width_sc, height_sc))
+window_1.state('zoom')
 tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
     .place(anchor="center", x=width_sc/2, y=50)
 
