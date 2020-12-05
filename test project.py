@@ -72,7 +72,7 @@ word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves"
              "school", "behavior", "current", "day", "death", "father", "flight", "look", "meat", "rain", "religion"]
 hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger but smaller", "sweep things on the ground", \
              "you can read it or write it", "keeping your pants on your waist", "heating things up", \
-             "cover your hands", "a device for showing time", "used for sit", "used for cutting", \
+             "cover your hands", "a device for showing time", "used for sit", "used for writing or drawing", "used for cutting", \
              "when thing goes quiet", "most", "used for lifting people", "used to take a picture", "listen to music", \
              "when you thristy", "shinning in the space", "reflection of an image", "sticky paper", "sadness", \
              "american football", "used for filling water", "used for calling", "a place where cars run", "on and off", \
