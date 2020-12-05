@@ -67,16 +67,16 @@ window_1 = tk.Tk()
 window_1.title("Hangman!!!")
 
 word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves", "clock", "chair", "pencil", \
-             "knife", "silent", "majority", "elevator", "camera", "headphone", "drink", "star", "mirror", \
-             "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "dentist", "umbrella", "century", \
+             "knife", "silent", "majority", "elevator", "arrow", "ambulance", "drink", "star", "ability", \
+             "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "polite", "umbrella", "century", \
              "school", "behavior", "current", "day", "death", "father", "flight", "look", "meat", "rain", "religion"]
 hint_list = ["it's a four-wheeled vehicle", "it can bark", "it's like a tiger but smaller", "sweep things on the ground", \
              "you can read it or write it", "keeping your pants on your waist", "heating things up", \
              "cover your hands", "a device for showing time", "used for sit", "used for writing or drawing", "used for cutting", \
-             "when thing goes quiet", "most", "used for lifting people", "used to take a picture", "listen to music", \
-             "when you thristy", "shinning in the space", "reflection of an image", "sticky paper", "sadness", \
+             "when thing goes quiet", "most", "used for lifting people", "Used with a bow", "Used for receiving patients", \
+             "when you thristy", "shinning in the space", "skill", "sticky paper", "sadness", \
              "american football", "used for filling water", "used for calling", "a place where cars run", "on and off", \
-             "the doctor for teeth", "used for protection agianst rain", "a period hundred years", "a place where people goes to study", \
+             "As opposed to rude", "used for protection agianst rain", "a period hundred years", "a place where people goes to study", \
              "the way that someone behaves", "of the present time", "a period of 24 hours", "the end of life", "a male parent", \
              "a journey in an aircraft", "to direct your eyes in order to see", "the flesh of an animal when it is used for food", \
              "drops of water from clouds", "the belief in, and worship of, a god or gods"]
