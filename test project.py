@@ -114,10 +114,10 @@ txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
 txt_hint.place(anchor="center", x=width_sc/2, y=675)
 
 
-tk.Label(text="Enter your guess : ", bg="pink").place(x=250, y=800, anchor="w")
+tk.Label(text="Enter your guess : ", bg="pink").place(x=350, y=800, anchor="w")
 blank_txt = StringVar()
-txt = tk.Entry(textvariable=blank_txt, width=10)
-txt.place(anchor="w", x=800, y=800)
+txt = tk.Entry(textvariable=blank_txt, width=5, bd=5, justify="center")
+txt.place(anchor="w", x=900, y=800)
 
 
 enter = tk.Button(window_1, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
