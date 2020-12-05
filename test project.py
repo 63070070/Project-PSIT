@@ -88,7 +88,8 @@ photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2
     , tk.PhotoImage(file=path+r'\images\new hang5_removebg.png').subsample(2)\
     , tk.PhotoImage(file=path+r'\images\new hang6_removebg.png').subsample(2)\
     , tk.PhotoImage(file=path+r'\images\new hang7_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2)]
+    , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2)\
+    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)]]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
@@ -112,13 +113,13 @@ txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
 txt_hint.place(anchor="center", x=width_sc/2, y=675)
 
 
-tk.Label(text="Enter your guess : ", bg="pink").place(x=200, y=800, anchor="w")
+tk.Label(text="Enter your guess : ", bg="pink").place(x=250, y=800, anchor="w")
 blank_txt = StringVar()
 txt = tk.Entry(textvariable=blank_txt, width=10)
-txt.place(anchor="w", x=750, y=800)
+txt.place(anchor="w", x=800, y=800)
 
 
-enter = tk.Button(window_1, text="Enter", font="Consolas 30", fg="#FF3232", width=10, command=lambda txt=txt: guess(txt))
+enter = tk.Button(window_1, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
 enter.place(anchor="center", x=1200, y=800)
 
 newgame()
