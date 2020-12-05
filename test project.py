@@ -96,7 +96,7 @@ width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight(
 window_1.geometry("%dx%d"%(width_sc, height_sc))
 window_1.state('zoom')
 tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
-    .place(anchor="center", x=width_sc/2, y=50)
+    .place(anchor="center", x=width_sc/2, y=height_sc/14)
 
 
 imgLabel = tk.Label(window_1)
@@ -106,22 +106,22 @@ imgLabel.config(image=photos[0])
 
 lblword = StringVar()
 txt_show = tk.Label(window_1, textvariable=lblword)
-txt_show.place(anchor="center", x=width_sc/2, y=550)
+txt_show.place(anchor="center", x=width_sc/2, y=height_sc/2)
 
 
 word_hint = StringVar()
 txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
-txt_hint.place(anchor="center", x=width_sc/2, y=675)
+txt_hint.place(anchor="center", x=width_sc/2, y=height_sc/1.5)
 
 
-tk.Label(text="Enter your guess : ", bg="pink").place(x=350, y=800, anchor="w")
+tk.Label(text="Enter your guess : ", bg="pink").place(x=350, y=height_sc/1.3, anchor="w")
 blank_txt = StringVar()
 txt = tk.Entry(textvariable=blank_txt, width=5, bd=5, justify="center")
-txt.place(anchor="w", x=900, y=800)
+txt.place(anchor="w", x=900, y=height_sc/1.3)
 
 
 enter = tk.Button(window_1, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
-enter.place(anchor="center", x=1200, y=800)
+enter.place(anchor="center", x=1200, y=height_sc/1.31)
 
 newgame()
 window_1.mainloop()
