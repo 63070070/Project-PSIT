@@ -32,11 +32,11 @@ def guess(input_txt):
     guessed = list(lblword.get())
 
     if len(input_txt) > 1:
-        tk.messagebox.showerror('Warning!!', 'Please type only one letter')
+        tk.messagebox.showerror('Warning!!', 'Please type only one word')
     elif not input_txt.isalpha():
-        tk.messagebox.showerror('Warning!!', 'Please type a letter')
+        tk.messagebox.showerror('Warning!!', 'Please type a word')
     elif input_txt in already_guess:
-        tk.messagebox.showwarning("Warning!!!", "You have already guessed this letter")
+        tk.messagebox.showwarning("Warning!!!", "You have already guessed this word")
     else:
         already_guess += [input_txt]
         if word_withspaces.count(input_txt) > 0:
@@ -80,38 +80,40 @@ hint_list = ["It's a four-wheeled vehicle", "It can bark", "It's like a tiger bu
              "the way that someone behaves", "of the present time", "a period of 24 hours", "the end of life", "a male parent", \
              "a journey in an aircraft", "to direct your eyes in order to see", "the flesh of an animal when it is used for food", \
              "drops of water from clouds", "the belief in, and worship of, a god or gods"]
-path = os.getcwd()
-photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang2_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang3_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang4_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang5_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang6_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang7_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2)\
-    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)]
+
+photos = [tk.PhotoImage(file=r"images\new hang1_removebg.png").subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang2_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang3_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang4_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang5_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang6_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang7_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\new hang8_removebg.png').subsample(2, 2)\
+    , tk.PhotoImage(file=r'images\enter btn.png').subsample(2)]
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
 window_1.geometry("%dx%d"%(width_sc, height_sc))
 window_1.state('zoom')
 tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
-    .place(anchor="center", x=width_sc/2, y=height_sc/14)
+    .pack(side="top", pady=(height_sc//20, 0))
 
 
-imgLabel = tk.Label(window_1)
-imgLabel.place(anchor="center", x=width_sc/2, y=height_sc/3.5)
+frame_image = tk.Frame(window_1)
+imgLabel = tk.Label(frame_image)
 imgLabel.config(image=photos[0])
+imgLabel.pack()
+frame_image.pack(side="top", pady=(height_sc//20, 0))
 
 
 lblword = StringVar()
 txt_show = tk.Label(window_1, textvariable=lblword)
-txt_show.place(anchor="center", x=width_sc/2, y=height_sc/2)
+txt_show.pack(side="top", pady=(height_sc//20, 0))
 
 
 word_hint = StringVar()
 txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
-txt_hint.place(anchor="center", x=width_sc/2, y=height_sc/1.5)
+txt_hint.pack(side="top", pady=(height_sc//20, 0))
 
 
 frame_guess = tk.Frame(window_1)
@@ -121,9 +123,7 @@ txt = tk.Entry(frame_guess, textvariable=blank_txt, width=5, bd=5, justify="cent
 txt.pack(side="left", padx=(0, 10))
 enter = tk.Button(frame_guess, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
 enter.pack(side="left", padx=(10, 0))
-frame_guess.place(x=width_sc/4, y=height_sc/1.31)
-
-
+frame_guess.pack(side="top", pady=(height_sc//20, 0))
 
 newgame()
 window_1.mainloop()
