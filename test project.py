@@ -95,7 +95,7 @@ window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
 window_1.geometry("%dx%d"%(width_sc, height_sc))
 window_1.state('zoom')
-tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
+tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB", font=("Comic Sans MS", 40))\
     .pack(side="top", pady=(height_sc//20, 0))
 
 
@@ -112,12 +112,12 @@ txt_show.pack(side="top", pady=(height_sc//20, 0))
 
 
 word_hint = StringVar()
-txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
+txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow", font=("Comic Sans MS", 40))
 txt_hint.pack(side="top", pady=(height_sc//20, 0))
 
 
 frame_guess = tk.Frame(window_1)
-tk.Label(frame_guess, text="Enter your guess : ", bg="pink").pack(side="left", padx=(0, 10))
+tk.Label(frame_guess, text="Enter your guess : ", bg="pink", font=("Franklin Gothic", 40)).pack(side="left", padx=(0, 10))
 blank_txt = StringVar()
 txt = tk.Entry(frame_guess, textvariable=blank_txt, width=5, bd=5, justify="center")
 txt.pack(side="left", padx=(0, 10))
