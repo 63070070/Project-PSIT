@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import StringVar
+from tkinter import *
 import random
 import os
 
@@ -22,12 +23,12 @@ def newgame():
     already_guess = []
 
 
-def guess(input_txt):
+def guess(*args):
     """Check Function"""
     global word_withspaces
     global number_guess
     global already_guess
-    input_txt = input_txt.get().rstrip().lower()
+    input_txt = blank_txt.get().rstrip().lower()
     txt = list(word_withspaces)
     guessed = list(lblword.get())
 
@@ -66,6 +67,7 @@ def guess(input_txt):
 window_1 = tk.Tk()
 window_1.title("Hangman!!!")
 
+
 word_list = ["car", "dog", "cat", "bloom", "book", "belt", "microwave", "gloves", "clock", "chair", "pencil", \
              "knife", "silent", "majority", "elevator", "arrow", "ambulance", "drink", "star", "ability", \
              "sticker", "sorrow", "soccer", "bottle", "phone", "road", "switch", "polite", "umbrella", "century", \
@@ -89,13 +91,15 @@ photos = [tk.PhotoImage(file=r"images\new hang1_removebg.png").subsample(2, 2)\
     , tk.PhotoImage(file=r'images\new hang6_removebg.png').subsample(2, 2)\
     , tk.PhotoImage(file=r'images\new hang7_removebg.png').subsample(2, 2)\
     , tk.PhotoImage(file=r'images\new hang8_removebg.png').subsample(2, 2)\
-    , tk.PhotoImage(file=r'images\enter btn.png').subsample(2)]
+    , tk.PhotoImage(file=r'images\enter btn.png').subsample(2)\
+    , tk.PhotoImage(file=r'images\bgimage.png')]
+
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
 window_1.geometry("%dx%d"%(width_sc, height_sc))
 window_1.state('zoom')
-tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB", font=("Comic Sans MS", 40))\
+tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB")\
     .pack(side="top", pady=(height_sc//20, 0))
 
 
@@ -112,15 +116,18 @@ txt_show.pack(side="top", pady=(height_sc//20, 0))
 
 
 word_hint = StringVar()
-txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow", font=("Comic Sans MS", 40))
+txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow")
 txt_hint.pack(side="top", pady=(height_sc//20, 0))
 
 
 frame_guess = tk.Frame(window_1)
-tk.Label(frame_guess, text="Enter your guess : ", bg="pink", font=("Franklin Gothic", 40)).pack(side="left", padx=(0, 10))
+tk.Label(frame_guess, text="Enter your guess : ", bg="pink").pack(side="left", padx=(0, 10))
 blank_txt = StringVar()
 txt = tk.Entry(frame_guess, textvariable=blank_txt, width=5, bd=5, justify="center")
+txt.bind("<Return>", guess)
 txt.pack(side="left", padx=(0, 10))
+
+
 enter = tk.Button(frame_guess, image=photos[8], text="Enter", command=lambda txt=txt: guess(txt), borderwidth=0)
 enter.pack(side="left", padx=(10, 0))
 frame_guess.pack(side="top", pady=(height_sc//20, 0))
