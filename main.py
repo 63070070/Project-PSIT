@@ -2,7 +2,6 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import StringVar
-from tkinter import *
 import random
 import os
 
@@ -93,45 +92,48 @@ photos = [tk.PhotoImage(file=path+r"\images\new hang1_removebg.png").subsample(2
     , tk.PhotoImage(file=path+r'\images\new hang6_removebg.png').subsample(2, 2)\
     , tk.PhotoImage(file=path+r'\images\new hang7_removebg.png').subsample(2, 2)\
     , tk.PhotoImage(file=path+r'\images\new hang8_removebg.png').subsample(2, 2)\
-    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)]
+    , tk.PhotoImage(file=path+r'\images\enter btn.png').subsample(2)\
+    , tk.PhotoImage(file=r'images\bgimage.png')]
+
+tk.Label(window_1, image = photos[9]).place(relwidth = 1, relheight = 1)
 
 
 window_1.option_add("*Font", "Consolas 40")
 width_sc, height_sc = window_1.winfo_screenwidth(), window_1.winfo_screenheight()
 window_1.geometry("%dx%d"%(width_sc, height_sc))
 window_1.state('zoom')
-tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#61F3EB", font=("Forte", 60))\
+tk.Label(window_1, text="Welcome to Hangman Minigame!!!", bg="#ffcccc", font=("Forte", 60))\
     .pack(side="top", pady=(height_sc//30, 0))
 
 
 frame_image = tk.Frame(window_1)
-imgLabel = tk.Label(frame_image)
+imgLabel = tk.Label(frame_image, bg="#ffe6f2")
 imgLabel.config(image=photos[0])
 imgLabel.pack()
 frame_image.pack(side="top", pady=(height_sc//30, 0))
 
 
 lblword = StringVar()
-txt_show = tk.Label(window_1, textvariable=lblword)
-txt_show.pack(side="top", pady=(height_sc//20, 0))
+txt_show = tk.Label(window_1, textvariable=lblword, bg="#ffe6f2")
+txt_show.pack(side="top", pady=(height_sc//30, 0))
 
 
 word_hint = StringVar()
-txt_hint = tk.Label(window_1, textvariable=word_hint, bg="yellow", font=("Comic Sans MS", 40))
-txt_hint.pack(side="top", pady=(height_sc//20, 0))
+txt_hint = tk.Label(window_1, textvariable=word_hint, bg="#ffe6f2", font=("Comic Sans MS", 40))
+txt_hint.pack(side="top", pady=(height_sc//30, 0))
 
 
-frame_guess = tk.Frame(window_1)
-tk.Label(frame_guess, text="Enter your guess : ", bg="pink", font=("Comic Sans MS", 40)).pack(side="left", padx=(0, 10))
+frame_guess = tk.Frame(window_1, bg="#ffe6f2")
+tk.Label(frame_guess, text="Enter your guess : ", bg="#ffe6f2", font=("Comic Sans MS", 40)).pack(side="left", padx=(0, 10))
 blank_txt = StringVar()
 txt = tk.Entry(frame_guess, textvariable=blank_txt, width=4, bd=5, justify="center")
 txt.bind("<Return>", guess)
 txt.pack(side="left", padx=(0, 10))
 
 
-enter = tk.Button(frame_guess, image=photos[8], text="Enter", command=guess, borderwidth=0)
-enter.pack(side="left", padx=(10, 0))
-frame_guess.pack(side="top", pady=(height_sc//20, 0))
+enter = tk.Button(frame_guess, image=photos[8], text="Enter", command=guess, borderwidth=0, bg="#ffe6f2", bd=10)
+enter.pack(side="left", padx=(20, 0))
+frame_guess.pack(side="top", pady=(height_sc//30, 0))
 
 newgame()
 window_1.mainloop()
