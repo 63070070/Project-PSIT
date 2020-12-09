@@ -48,6 +48,7 @@ def guess(*args):
                     ans_new = tk.messagebox.askyesno("Hangman", "You Win!!!\nDo You Want To Play Again ?")
                     if ans_new:
                         newgame()
+                        break
                     else:
                         window_1.destroy()
         else:
